@@ -1,0 +1,20 @@
+<h2>Relatório Diário</h2>
+
+           <form action="#compara" >
+                    <label for="dataAtual"> Informe a data para gerar o relatório: DD/MM/AAAA </label>
+                    <input type="text" id="dataAtual" name="dataAtual" class="#formatDate" /><br>
+                     <button type="submit" class="btn btn-success">Gerar Relatorio Diario</button>
+                    </form>         
+{{#each clientes}}
+    
+    <div class="card mt-4">
+            <div class="card-body">   
+                <script id="#compara">
+                         if(dataAtual=={{#formatDate date}}{{/formatDate}}) {
+                                    <h4>Data: {{#formatDate date}}{{/formatDate}}</h4>
+
+                 </script>
+          </div>
+    </div>
+{{else}}
+{{/each}}

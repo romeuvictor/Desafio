@@ -1,0 +1,20 @@
+<h2>Lista de Clientes: </h2>
+<hr>
+<a href="/admin/clientes/add"><button class="btn btn-success">Cadastrar cliente</button></a>
+
+{{#each clientes}}
+    <div class="card mt-4">
+            <div class="card-body">
+                <h5>Cliente : {{nome}}</h5>
+                <h6>Idade: {{idade}}</h6>
+                <h6>Endereço: {{endereco}}</h6>
+                <h6>Número da conta: {{conta}}</h6>
+                <h6>Saldo da conta: {{saldo}}</h6>
+                <small>Data de criação: {{date}}</small><br>
+                <a href="/admin/extratoConta/"><button class="btn btn-success mt-2">Extrato da conta</button></a>
+                <a href="/admin/clientes/editar/{{_id}}"><button class="btn btn-success mt-1">Alterar dados</button></a>
+                
+            </div>
+    </div>
+{{else}}
+{{/each}}

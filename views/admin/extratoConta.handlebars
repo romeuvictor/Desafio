@@ -1,0 +1,12 @@
+<h2>Extrato da Conta </h2>
+
+{{#each clientes}}
+    <div class="card mt-4">
+            <div class="card-body">
+                <h4>Saldo da conta: {{saldo}}</h4>
+                <h6>Cliente : {{nome}}</h6>
+                <h6>Número da conta: {{conta}}</h6>                          
+            </div>
+    </div>
+{{else}}
+{{/each}}
